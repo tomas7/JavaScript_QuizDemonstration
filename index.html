@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Small JS quiz</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    </head>
+    
+   
+    
+    <style>
+    
+        .form-control {
+            width: 200px;
+            text-align: center!important;
+            margin: auto;
+        }
+        
+        img {
+            width: 500px;
+            height: auto;
+            margin-top: -200px;
+        }
+    
+        
+        .checkBtn{
+         
+            margin-top: 35px;
+        }
+        iframe {
+            text-align: center!important;
+            margin: auto;
+        }
+        div.alert-messages {
+        position: fixed;
+        top: 50px;
+        left: 25%;
+        right: 25%;
+        z-index: 7000;
+        }
+        
+        .alert {
+            opacity: 0;
+            position: fixed;
+            width: 100%;
+            text-align: center!important;
+            margin: auto;
+            -webkit-transition: 1s; /* Safari */
+            transition: 1s;
+        }
+        
+        .mystyle{
+            opacity: 1;
+            -webkit-transition: 1s; /* Safari */
+            transition: 1s;
+        }
+     
+        
+    </style>
+
+    <body>
+        
+        <div id="test" class="alert alert-success" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <p id="alertText">Success! You have been signed in successfully!</p>
+        </div>
+        
+        <main role="main">
+            
+            <section class="jumbotron text-center">
+   
+                <div class="container">
+                  
+                    <h1 class="jumbotron-heading" style="margin-bottom: 55px;">Simple JS quiz</h1>
+                    
+                    <hr></hr>
+                    <h1 id="" style="margin-bottom: 5px; color:green">Question:</h2>
+                    <h2 id="Question" style="margin-bottom: 25px;"></h2>
+                    <hr></hr>
+                    <h4 id="a0"></h3>
+                    <h4 id="a1"></h3>
+                    <h4 id="a2"></h3>
+                    <h4 id="a3"></h3>
+                    <h4 id="a4"></h3> 
+                    <h4 id="a5"></h3> 
+                    
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" style="margin-top: 25px;">Write your answer (use number of question, example "0")</label>
+                        <input class="form-control" id="answerHere" placeholder="Answer here">
+                    </div>
+                    
+                    <div class="checkBtn">
+                        <button class="btn btn-primary my-2" id="Check">Check answer</button>
+                    </div>
+                    
+                  
+                    
+                    <h2 id="Score" style="margin-bottom: 65px; margin-top: 35px;">Your score is: 0</h2>
+                 
+                    <h3 style="margin-bottom: 25px; color: rgb(0, 175, 0)">See the video</h3>
+                    
+                    <iframe X-Frame-Options='' id="inframeVideo" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    
+                </div>
+            </section>
+        </main>
+        
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    
+                    <h4 class="modal-title">Purpose ?</h4>
+                  </div>
+                  <div class="modal-body">
+                      <p>This is a small project made only for purpose of personal practice. I put main emphasis on JavaScript as programming language where styling in CSS was not important here.</br></br>
+                      1. Read question and try to answer. You have text field where you have to type <strong>number of question </strong> you think is correct (Fx.: "0").</br>
+                      2. Don`t forget to see the video after you respond.
+                        </br></br>
+                      There are about 3 questions which are pretty interesting, try to guess the answer and check the video as correct answer will be clear after watching it. Enjoy and if you do let me know back <a href="mailto: haverlatom7@gmai.com" target="BLANK">here</a>
+
+                      </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+
+ <script type="text/javascript">
+    $(window).load(function()
+{
+    $('#myModal').modal('show');
+});
+
+  
+</script>
+ 
+        <script src="script.js"></script>
+         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
